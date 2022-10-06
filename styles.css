@@ -1,0 +1,27 @@
+/*Css Stylesheet*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.leftColumn {
+    flex: 1 1 35%;
+    background-color: darkgreen;
+    min-height: 100vh;
+}
+
+.rightColumn {
+    flex: 1 1 65%;
+    min-height: 100vh;
+    padding: 3rem;
+}
+
+.rightColumn :first-child {
+    margin-top: 10vh;
+}
