@@ -14,31 +14,65 @@
 
     <div class="leftColumn">
         <div class="blackBar">
-            <div class="odinLogo"></div>
-            <div class="odinText"></div>
-            <div class="photoCredit"></div>
+            <img src="odin.png" alt="Odin" class="odinLogo" height="90%">
+            <div class="odinText">Odin</div>
         </div>
+        <div class="photoCredit">Photo by <a href="https://unsplash.com/photos/25xggax4bSA" target="blank">Halie West on Usplash</a></div>
     </div>
 
     <div class="rightColumn">
-        <p>This is not a real online service! You know you need something<br> like this in your 
-                    life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
-        <p>You <em>know</em> you want to!</p>
 
-        <form action="post">
-        <fieldset>    
+        <div class="textContainer">
+            <p>This is not a real online service! You know you need something<br> like this in your
+                        life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to!</p>
+        </div>
+
+        <form action="http://httpbin.org/post" method="post" target="blank">
+        <fieldset class="firstField">    
                 <legend>Let's Do This!</legend>
+                <div class="fieldContainer">
+                        <div class="row">
+                            <div>
+                                <label for="firstName">First Name</label>
+                                <input placeholder="John" id="firstName" name="firstName" type="text" pattern="[a-zA-Z ]+" required>
+                            </div>
+                            <div>
+                                <label for="lastName">Last Name</label>
+                                <input placeholder="Doe" id="lastName" name="lastName" type="text" pattern="[a-zA-Z ]+" required>
+                            </div>
+                        </div>
 
-                <input id="firstName" name="firstName" type="text">
-                <input id="lastName" name="lastName" type="text">
-                <input id="email" name="email" type="email">
-                <input id="phoneNumber" name="phoneNumber" type="number">
-                <input id="password" name="password" type="text">
-                <input id="comfirmPassword" name="confirmPassword" type="text">
+                        <div class="row">
+                            <div>
+                                <label for="email">Email</label>
+                                <input placeholder="email@email.com" id="email" name="email" type="email" required>
+                            </div>
+                            <div>
+                                <label for="phoneNumber">Phone Number</label>
+                                <input placeholder="(555)555-5555" id="phoneNumber" name="phoneNumber" type="text" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div>
+                                <label for="password">Password</label>
+                                <input placeholder="At least 4 characters" id="password" name="password" type="password" minlength=4 pattern="^(?!\s*$).+" required>
+                            </div>
+                            <div>
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input placeholder="confirm" id="confirmPassword" name="confirmPassword" type="password" minlength=4 pattern="^(?!\s*$).+" required>
+                            </div>
+                        </div>
+                </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="footer">
             <button type="submit">Create Account</button>
         </fieldset>
+
+        <div class="logInContainer">
+            <span>Already have an account?</span><a href="">&nbsp;Log in</a>
+        </div>
             
         </form>
     </div>
