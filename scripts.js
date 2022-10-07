@@ -18,3 +18,7 @@ passwordBoxes.forEach((selectedBox) => {
 
 const submitButton = document.querySelector('button');
 const invalidInputs = document.querySelectorAll('input:invalid');
+
+submitButton.addEventListener('click', () =>{
+    document.querySelector('form').classList.add("submitted");
+});
